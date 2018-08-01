@@ -1,0 +1,57 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn
+
+PATH: 
+  /home/heymi/bin:/home/heymi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Python27:/mnt/c/Python27/Scripts:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files (x86)/Yarn/bin:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/tools/mongodb.portable/bin:/mnt/c/Users/heymind/AppData/Local/Microsoft/WindowsApps:/mnt/c/tools/msys64:/mnt/c/Users/heymind/AppData/Local/Yarn/bin:/mnt/c/tools/msys64/usr/bin:/mnt/c/Program Files/Bandizip:/mnt/c/Program Files (x86)/Oni:/mnt/c/Users/heymind/AppData/Local/hyper/app-2.0.0/resources/bin:/snap/bin
+
+Yarn version: 
+  1.9.2
+
+Node version: 
+  10.7.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/home/heymi/.cache/yarn/v1/npm-arr-union-3.1.0-e39b09aea9def866a8f206e288af63919bae39c4/README.md' -> '/mnt/d/workspace/201808/byrioaccount/node_modules/arr-union/README.md'
+
+npm manifest: 
+  {
+    "name": "byrioaccount",
+    "version": "1.0.0",
+    "description": "Nuxt.js project",
+    "author": "heymind <swthink@live.cn>",
+    "private": true,
+    "scripts": {
+      "dev": "nuxt",
+      "build": "nuxt build",
+      "start": "nuxt build && nuxt start",
+      "precommit": "npm run lint",
+      "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    },
+    "dependencies": {
+      "axios": "^0.16.2",
+      "cross-env": "^5.0.1",
+      "express": "^4.15.3",
+      "nuxt": "latest",
+      "source-map-support": "^0.4.15"
+    },
+    "devDependencies": {
+      "babel-eslint": "^7.2.3",
+      "eslint": "^4.3.0",
+      "eslint-config-standard": "^10.2.1",
+      "eslint-loader": "^1.9.0",
+      "eslint-plugin-html": "^3.1.1",
+      "eslint-plugin-import": "^2.7.0",
+      "eslint-plugin-node": "^5.1.1",
+      "eslint-plugin-promise": "^3.5.0",
+      "eslint-plugin-standard": "^3.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
