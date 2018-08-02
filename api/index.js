@@ -1,15 +1,18 @@
 require('dotenv').config()
-
+const passport = require('passport')
 const express = require('express')
 const morgan = require('morgan')
 const session = require('express-session')
 const path = require('path')
 const ooth = require('./ooth')
+const bodyParser = require('body-parser')
 // Create express instnace
 const app = express()
 
 app.use(morgan('dev'))
-
+app.use(bodyParser())
+app.use(passport.initialize())
+app.use(passport.session())
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 

@@ -9,12 +9,12 @@ const csrfProtect = csrf({
     cookie: true
 })
 
-router.get('/consent',function (req, res, next) {
-    if (!req.user) {
-        console.log(req.user);
+router.get('/auth/consent',function (req, res, next) {
+    if (!req.session.passport || !req.session.passport.user) {
         res.redirect('/login?redirect_to=' + req.originalUrl);
         next();
     } else {
+        const userId = req.session.passport.user;
         const {
             consent_challenge
         } = req.query;
@@ -32,10 +32,10 @@ router.get('/consent',function (req, res, next) {
                         grant_scope: requested_scope,
                         session: {
                             access_token: {
-                                id: req.user.id
+                                id: userId
                             },
                             id_token: {
-                                id: req.user.id
+                                id: userId
                             }
                         }
                     }).then(({
@@ -43,7 +43,7 @@ router.get('/consent',function (req, res, next) {
                     }) => res.redirect(redirect_to))
                 } else {
                     res.render('consent', {
-                        csrfToken: req.csrfToken(),
+                        csrfToken:"__!__",
                         challenge: consent_challenge,
                         // We have a bunch of data available from the response, check out the API docs to find what these values mean
                         // and what additional data you have available.
@@ -58,10 +58,11 @@ router.get('/consent',function (req, res, next) {
 
 })
 
-router.post('/consent',  function (req, res, next) {
-    if (!req.user) {
+router.post('/auth/consent',  function (req, res, next) {
+    if (!req.session.passport || !req.session.passport.user) {
         res.status(401).end();
     } else {
+        const userId = req.session.passport.user;
         const {
             challenge
         } = req.body;
@@ -81,7 +82,7 @@ router.post('/consent',  function (req, res, next) {
                 });
         }
 
-        const {
+        let {
             grant_scope,
             remember
         } = req.body
@@ -93,10 +94,10 @@ router.post('/consent',  function (req, res, next) {
                 grant_scope: grant_scope,
                 session: {
                     access_token: {
-                        id: req.user.id
+                        id: userId
                     },
                     id_token: {
-                        id: req.user.id
+                        id:userId
                     }
                 },
 
