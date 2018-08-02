@@ -10,6 +10,9 @@ const app = express()
 
 app.use(morgan('dev'))
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
 app.use(session({
   name: 'api-session-id',
   secret: process.env.SESSION_SECERT,

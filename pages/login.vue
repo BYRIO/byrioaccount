@@ -33,7 +33,9 @@ export default {
           { withCredentials: true }
         )
         alert(res.data.message)
-        this.$router.push('/')
+        if (this.$route.query && this.$route.query.redirect_to) {
+          window.location.href = this.$route.query.redirect_to
+        } else this.$route.push('/')
       } catch ({ response }) {
         alert(response.data.message)
       }
