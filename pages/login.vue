@@ -33,7 +33,11 @@ export default {
           { withCredentials: true }
         )
         alert(res.data.message)
-        if (this.$route.query && this.$route.query.redirect_to) {
+        if (this.$route.query && this.$route.query.login_challenge) {
+          window.location.href =
+            '/api/login_accept?login_challenge=' +
+            this.$route.query.login_challenge
+        } else if (this.$route.query && this.$route.query.redirect_to) {
           window.location.href = this.$route.query.redirect_to
         } else this.$route.push('/')
       } catch ({ response }) {

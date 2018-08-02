@@ -263,11 +263,11 @@ autoprefixer@^7.1.1, autoprefixer@^7.2.5:
     postcss "^6.0.17"
     postcss-value-parser "^3.2.3"
 
-axios@^0.16.2:
-  version "0.16.2"
-  resolved "http://registry.npm.taobao.org/axios/download/axios-0.16.2.tgz#ba4f92f17167dfbab40983785454b9ac149c3c6d"
+axios@^0.18.0:
+  version "0.18.0"
+  resolved "http://registry.npm.taobao.org/axios/download/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
   dependencies:
-    follow-redirects "^1.2.3"
+    follow-redirects "^1.3.0"
     is-buffer "^1.1.5"
 
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
@@ -1592,6 +1592,14 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+csrf@^3.0.6:
+  version "3.0.6"
+  resolved "http://registry.npm.taobao.org/csrf/download/csrf-3.0.6.tgz#b61120ddceeafc91e76ed5313bb5c0b2667b710a"
+  dependencies:
+    rndm "1.2.0"
+    tsscmp "1.0.5"
+    uid-safe "2.1.4"
+
 css-color-function@~1.3.3:
   version "1.3.3"
   resolved "http://registry.npm.taobao.org/css-color-function/download/css-color-function-1.3.3.tgz#8ed24c2c0205073339fafa004bc8c141fccb282e"
@@ -2565,9 +2573,9 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
-follow-redirects@^1.2.3:
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.5.1.tgz#67a8f14f5a1f67f962c2c46469c79eaec0a90291"
+follow-redirects@^1.3.0:
+  version "1.5.2"
+  resolved "http://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.5.2.tgz#5a9d80e0165957e5ef0c1210678fc5c4acb9fb03"
   dependencies:
     debug "^3.1.0"
 
@@ -5549,6 +5557,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rndm@1.2.0:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/rndm/download/rndm-1.2.0.tgz#f33fe9cfb52bbfd520aa18323bc65db110a1b76c"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/run-async/download/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
@@ -6181,6 +6193,10 @@ tryer@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/tryer/download/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
 
+tsscmp@1.0.5:
+  version "1.0.5"
+  resolved "http://registry.npm.taobao.org/tsscmp/download/tsscmp-1.0.5.tgz#7dc4a33af71581ab4337da91d85ca5427ebd9a97"
+
 tsscmp@~1.0.0:
   version "1.0.6"
   resolved "http://registry.npm.taobao.org/tsscmp/download/tsscmp-1.0.6.tgz#85b99583ac3589ec4bfef825b5000aa911d605eb"
@@ -6253,6 +6269,12 @@ uglifyjs-webpack-plugin@^1.1.8:
     uglify-es "^3.3.4"
     webpack-sources "^1.1.0"
     worker-farm "^1.5.2"
+
+uid-safe@2.1.4:
+  version "2.1.4"
+  resolved "http://registry.npm.taobao.org/uid-safe/download/uid-safe-2.1.4.tgz#3ad6f38368c6d4c8c75ec17623fb79aa1d071d81"
+  dependencies:
+    random-bytes "~1.0.0"
 
 uid-safe@~2.1.5:
   version "2.1.5"

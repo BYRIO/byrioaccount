@@ -9,7 +9,7 @@ const csrfProtect = csrf({
     cookie: true
 })
 
-router.get('/', csrfProtect, function (req, res, next) {
+router.get('/consent',function (req, res, next) {
     if (!req.user) {
         console.log(req.user);
         res.redirect('/login?redirect_to=' + req.originalUrl);
@@ -58,7 +58,7 @@ router.get('/', csrfProtect, function (req, res, next) {
 
 })
 
-router.post('/', csrfProtection, function (req, res, next) {
+router.post('/consent',  function (req, res, next) {
     if (!req.user) {
         res.status(401).end();
     } else {
